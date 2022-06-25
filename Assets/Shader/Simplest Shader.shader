@@ -21,6 +21,7 @@ Shader "Custom/Simplest Shader"
 
             // 宣告 紋理屬性變數 以及 ST變數，Properties 裡面宣告過的變數，在CG裏頭還要再宣告一次，使變數能夠從 Properties 讀進來
             // ST 變數意旨 Scale & Transform，表示 UV 的縮放和平移
+            // UV 這名字的由來，就只是因為這二個字母是在三維的(X,Y,Z)前，沒別的意義
             sampler2D _MainTex;
             float4 _MainTex_ST;
             fixed4 _MainColor;
