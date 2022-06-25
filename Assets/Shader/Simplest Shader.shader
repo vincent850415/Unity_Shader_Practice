@@ -20,6 +20,7 @@ Shader "Custom/Simplest Shader"
             #pragma fragment frag
 
             // 宣告 紋理屬性變數 以及 ST變數，Properties 裡面宣告過的變數，在CG裏頭還要再宣告一次，使變數能夠從 Properties 讀進來
+            // ST 變數意旨 Scale & Transform，表示 UV 的縮放和平移
             sampler2D _MainTex;
             float4 _MainTex_ST;
             fixed4 _MainColor;
