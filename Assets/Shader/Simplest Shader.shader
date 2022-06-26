@@ -2,7 +2,8 @@ Shader "Custom/Simplest Shader"
 {
     Properties
     {
-        _MainColor ("MainColor", Color) = (1, 1, 1, 1) // 開放顏色屬性，_Name ("Display Name", type) = defaultValue[{options}]，type可能是 Float(浮點類型)、2D、3D(2D、3D貼圖類型)、color(顏色類型) 或是 Cube(立方體貼圖類型) 等等......
+        // 開放顏色屬性，_Name ("Display Name", type) = defaultValue[{options}]，type可能是 Float(浮點類型)、2D、3D(2D、3D貼圖類型)、color(顏色類型) 或是 Cube(立方體貼圖類型) 等
+        _MainColor ("MainColor", Color) = (1, 1, 1, 1) 
         _MainTex ("MainTex", 2D) = "white" {} // 開放紋理屬性
         _Cubemap ("Cubemap", Cube) = ""{}
         _Reflection ("Reflection", Range(0, 1)) = 0 // 開放反射屬性
