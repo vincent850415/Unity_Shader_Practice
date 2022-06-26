@@ -10,8 +10,8 @@ Shader "Custom/Lambert"
         {
 			CGPROGRAM
 
-            #pragma vertex vert
-            #pragma fragment frag
+			#pragma vertex vert
+			#pragma fragment frag
 
             // 包含檔中 .cginc (cg include 縮寫)，包含檔中定義了很多內置的輔助函數和數據結構體(Struct Type)
 			#include "UnityCG.cginc"
@@ -36,7 +36,6 @@ Shader "Custom/Lambert"
 				float3 n = UnityObjectToWorldNormal(v.normal);
 				n = normalize(n);
 
-
 				fixed3 l = normalize(_WorldSpaceLightPos0.xyz);
 
 				fixed ndotl = dot(n, l);
@@ -51,6 +50,6 @@ Shader "Custom/Lambert"
 			}
 
 			ENDCG
-        }
-    }
+		}
+	}
 }
