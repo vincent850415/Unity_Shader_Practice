@@ -1,13 +1,13 @@
 Shader "Custom/Half-Lambert"
 {
-    Properties
-    {
-        _MainColor ("Main Color", Color) = (1, 1, 1, 1)
-    }
-    SubShader
-    {
-        Pass
-        {
+	Properties
+	{
+		_MainColor ("Main Color", Color) = (1, 1, 1, 1)
+	}
+	SubShader
+	{
+		Pass
+		{
 			CGPROGRAM
 			
 			#pragma vertex vert
