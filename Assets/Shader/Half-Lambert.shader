@@ -1,4 +1,4 @@
-Shader "Custom/Lambert"
+Shader "Custom/Half-Lambert"
 {
     Properties
     {
@@ -40,8 +40,8 @@ Shader "Custom/Lambert"
 				fixed3 l = normalize(_WorldSpaceLightPos0.xyz);
 
 				fixed ndotl = dot(n, l);
-				o.dif = _LightColor0 * _MainColor * saturate(ndotl); // 將 x 的範圍擷取到 [0, 1] 之間
-				// Lambert 算法的缺點是背光面試「全黑的」，若增加輔助光照會不利於性能優化，因此可以用 Half-Lambert 算法改進
+				o.dif = _LightColor0 * _MainColor * (0.5 * ndotl + 0.5); // 與 Lambert 算法不太一樣，先乘以 0.5 將數值區間縮小到 [-0.5, 0.5]，然後加上 0.5，將區間移動到[0, 1]
+				// 如此一來，物體的光照強度會從最亮的螢光面逐漸過渡到最暗的背光面
 
 				return o;
 			}
