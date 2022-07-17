@@ -38,7 +38,8 @@ Shader "Custom/Per-Pixel"
 
                 return o;
             }
-
+            
+            //Per-Pixel Lighting 與 Phong Lighting 差別就在於計算顏色的部分不在「頂點」著色器的部分，而是在「片段」著色器的部分
             fixed4 frag (v2f i) : SV_Target
             {
                 //計算公式中的所有變量
